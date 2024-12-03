@@ -6,15 +6,15 @@ import input from './input.txt';
 
 const inputArray = input.split('\n');
 
-const start = Date.now();
+const start = performance.now();
 
 const one = partOne(inputArray);
 
-const lap = Date.now();
+const lap = performance.now();
 
 const two = partTwo(inputArray);
 
-const end = Date.now();
+const end = performance.now();
 
 console.log(`🎄 Part One: ${one}`);
 console.log(`🎄 Part Two: ${two}`);
