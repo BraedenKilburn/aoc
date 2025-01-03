@@ -9,12 +9,12 @@ const start = Date.now();
 
 const partOneFinalScore = partOne(rounds);
 console.log(
-	`🎄 Part one's final score is ${partOneFinalScore.toLocaleString()}.`,
+  `🎄 Part one's final score is ${partOneFinalScore.toLocaleString()}.`,
 );
 
 const partTwoFinalScore = partTwo(rounds);
 console.log(
-	`🎄 Part two's final score is ${partTwoFinalScore.toLocaleString()}.`,
+  `🎄 Part two's final score is ${partTwoFinalScore.toLocaleString()}.`,
 );
 
 const end = Date.now();

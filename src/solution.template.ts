@@ -1,3 +1,3 @@
 export default function partNumber(inputArray: string[]): number {
-	return 0;
+  return 0;
 }
