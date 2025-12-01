@@ -12,7 +12,7 @@ export default function partTwo(inputArray: string[]): number {
     const finalPosition = dialPosition + direction * distance;
 
     // Count the number of 100s crossed
-    if (direction === -1) {
+    if (movingLeft) {
       zeroHits +=
         Math.ceil(dialPosition / 100) - Math.ceil(finalPosition / 100);
     } else {
