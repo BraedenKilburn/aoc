@@ -1,93 +1,86 @@
-# 🎄 Advent of Code - Bun Template
+# Advent of Code Solutions
 
-Welcome to the Advent of Code Bun Template! This repository provides a streamlined setup for participating in the Advent of Code challenges using [Bun](https://bun.sh), a fast JavaScript all-in-one toolkit.
+This repository contains my solutions to [Advent of Code](https://adventofcode.com/) challenges over the years. All solutions are written in TypeScript and executed using [Bun](https://bun.sh/).
 
-## Why This Template is Useful
+> **Note:** This repository is based on a template I created, which is available at [aoc-bun](https://github.com/BraedenKilburn/aoc-bun).
 
-This template simplifies the process of tackling daily coding puzzles by providing a structured environment with essential tools and scripts. It allows you to quickly generate puzzle folders, fetch input data, and run your solutions with ease. Whether you're a seasoned coder or just starting, this template helps you focus on solving puzzles rather than setting up your development environment.
+## Structure
 
-Key features include:
+Solutions are organized by year and day.
 
-- **Easy Setup**: Clone the repository and get started with a single command.
-- **Organized Structure**: Each puzzle is neatly organized into its own folder with all necessary files.
-- **Convenient Scripts**: Run puzzles, watch for changes, and format your code effortlessly.
-- **Customizable**: Adjust your session token and target year easily through environment variables.
+Each day contains:
 
-Join the fun and challenge yourself with daily coding puzzles while enhancing your programming skills!
+- `1.ts` - Solution for Part One
+- `2.ts` - Solution for Part Two
+- `index.ts` - Entry point that runs both parts with benchmarking
+- `input.txt` - Puzzle input
+- `example.txt` - Example input (if used)
 
-## 🚀 Quick Start
+## Usage
 
-**1. Fork and clone this repository**
+### Running a Solution
 
-```bash
-git clone https://github.com/yourusername/aoc-bun.git
-cd aoc-bun
-```
-
-**2. Install dependencies**
+Run a specific day's solution:
 
 ```bash
-bun install
+bun run aoc <year> <day>
 ```
 
-**3. Set up your environment**
+Example:
 
 ```bash
-cp .env.sample .env
+bun run aoc 2025 1
 ```
 
-**4. Add your Advent of Code session token to `.env`**
+This will execute both parts of the solution and display results with performance metrics.
+
+### Generating a New Day
+
+To scaffold a new day's solution structure and fetch the input:
 
 ```bash
-AOC_SESSION=your_session_token_here
-YEAR=2024
+bun run aoc:generate --day <day>
 ```
 
-**🔑 Getting Your Session Token**
+**Note:** This requires environment variables:
 
-1. Visit [adventofcode.com](https://adventofcode.com)
-2. Open your browser's Developer Tools:
-   - Windows/Linux: Press `F12` or `Ctrl + Shift + I`
-   - macOS: Press `Cmd + Option + I`
-3. Navigate to the **Network** tab
-4. Refresh the page
-5. Click on any request to `adventofcode.com`
-6. In the request details, find the **Cookies** section
-7. Look for the `session` cookie and copy its value
+- `AOC_SESSION` - Your Advent of Code session cookie
+- `YEAR` - The year of the puzzle you are working on (e.g., `2025`)
 
-> **Note**: Keep your session token private and never commit it to version control!
+The script will:
 
-**5. Generate your first puzzle folder**
+- Create the day directory structure
+- Fetch your personalized input from Advent of Code
+- Generate template files for both parts
+- Create an `index.ts` entry point
+
+### Watch Mode
+
+Run a solution in watch mode for development:
 
 ```bash
-bun run generate day=1
+bun run aoc:watch <year> <day>
 ```
 
-**6. Start solving!**
+### Formatting
+
+Format all TypeScript files:
 
 ```bash
-bun run aoc 2024 1      # Run once
-bun run aoc:watch 2024 1 # Run with hot reload
+bun run format
 ```
 
-## 📁 What You Get
+## Features
 
-When you generate a new puzzle, you'll get a folder with everything you need:
+- **Benchmarking**: Each solution includes performance metrics (execution time and memory usage)
+- **Type Safety**: Full TypeScript support with proper typing
+- **Template Generation**: Automated scaffolding for new days
+- **Input Fetching**: Automatic download of puzzle inputs from Advent of Code
 
-```
-src/2024/1/
-├── index.ts    # Main entry point
-├── 1.ts        # Part one solution
-├── 2.ts        # Part two solution
-├── input.txt   # Your puzzle input
-└── example.txt # For example test cases
-```
+## Requirements
 
-## 💡 Pro Tips
+- [Bun](https://bun.sh/) (latest version recommended)
 
-- Use `example.txt` to test your solution with the puzzle's example data
-- The template automatically measures execution time for each part
-- Hot reload with `aoc:watch` makes testing iterations quick
-- All source files are automatically formatted with `bun run format`
+## Author
 
-Want to try a different year? Just update `YEAR` in your `.env` file!
+Braeden Kilburn
