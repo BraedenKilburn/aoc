@@ -42,7 +42,10 @@ async function fetchInput() {
   const response = await fetch(
     `https://adventofcode.com/${year}/day/${day}/input`,
     {
-      headers: { cookie: `session=${session}` },
+      headers: {
+        cookie: `session=${session}`,
+        'User-Agent': 'https://github.com/BraedenKilburn/aoc',
+      },
     },
   );
 
