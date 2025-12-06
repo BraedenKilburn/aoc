@@ -2,8 +2,8 @@ import partOne from './1';
 import partTwo from './2';
 
 // With Bun, text files can be imported as strings
-// import input from './example.txt';
-import input from './input.txt';
+import input from './example.txt';
+// import input from './input.txt';
 
 const inputArray = input.split('\n');
 
